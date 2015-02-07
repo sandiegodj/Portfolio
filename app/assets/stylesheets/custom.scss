@@ -1,6 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900,500);
+@import url(http://fonts.googleapis.com/css?family=Architects+Daughter);
 @import "reset";
+
+
+$primary-text-color: #555;
 
 *, *:before, *:after {
 	box-sizing: border-box;
@@ -24,7 +28,7 @@ header {
 	background: white;
 	a {
 		text-decoration: none;
-		color: #555555;
+		color: $primary-text-color;
 		transition: all 0.5s ease;
 	}
 	a:hover {
@@ -37,40 +41,11 @@ header {
 		margin-top: 20px;
 		margin-left: 5%;
 		a:hover {
-			color: #555555;
+			color: $primary-text-color;
 		}
 		.accent {
 			display: none;
 		}
-	}
-	.nav-collapse {
-		float: right;
-		ul > li > a:after {
-		 	background: #F4BF1E;
-		    color: #F4BF1E;
-		    content: "";
-		    height: 2px;
-		    left: 0;
-		    opacity: 1;
-		    position: absolute;
-		    top: -2px;
-		    -ms-transition: width 0.2s ease 0s;
-		    -webkit-transition: width 0.2s ease 0s;
-		    -moz-transition: width 0.2s ease 0s;
-		    -o-transition: width 0.2s ease 0s;
-		    transition: width 0.2s ease 0s; 
-		    width: 0;
-		}
-		ul li:hover a:after {
-			background-color: #F4BF1E;
-		    height: 2px;
-		    left: 0;
-		    position: absolute;
-		    top: -2px;
-		    width: 100%;
-		}
-
-
 	}
 }
 
@@ -94,10 +69,12 @@ header {
 }
 
 
+
 //Quote
 
 section.quote {
 	width: 100%;
+	font-family: 'Architects Daughter', cursive;
 	.quote-inner {
 	width: 90%;
 	margin: 0 auto;
@@ -105,10 +82,17 @@ section.quote {
 	padding-top: 15px;
 		figure {
 			margin: 0 auto;
-			width: 100%;
 		}
 		address {
 			text-align: right;
+		}
+	}
+}
+
+@media screen and (min-width: 520px ) {
+	section.quote {
+		figure {
+			text-align: center;
 		}
 	}
 }
