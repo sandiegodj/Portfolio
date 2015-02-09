@@ -8,4 +8,5 @@
 
 quotes = Quote.create([{quote: 'Appear weak when you are strong, and strong when you are weak', author: 'Sun Tzu'}, 
                       {quote: 'When you bring your full attention to each moment, a day is a complete lifetime of living and learning', author: 'Mark Divine'}, 
-                      {quote: 'When a man is beaten, tormented and defeated…He is ready to learn something', author: 'Emerson'}])
+                      {quote: 'When a man is beaten, tormented and defeated…He is ready to learn something', author: 'Emerson'},
+                      {quote: 'Life is not a solitary sport.  By helping each other, we all win.', author: "Unknown"}])
