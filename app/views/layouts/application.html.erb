@@ -3,8 +3,14 @@
 <head>
   <title>Portfolio</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  	<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <script type="text/javascript" charset="utf-8">
+		$(window).load(function() {
+		$('.flexslider').flexslider();
+		});
+	</script> 
 </head>
 <body>
 

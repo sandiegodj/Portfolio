@@ -2,32 +2,68 @@
 	<section id="top">
 		<header>
 			<div id="logo">
-				<a href="#top"><p class="main-logo">David<span class="bold">Janczyn</span><span class="accent">'s</span></p></a>
+				<a href="#top">
+					<p class="main-logo">David<span class="bold">Janczyn</span><span class="accent">'s</span>
+					</p>
+				</a>
 				<span class="sub-logo">Web Development</span>
 			</div>
 			<nav class="nav-collapse">
 				<ul>
-					<li><a href="#portfolio">Projects</a></li>
-					<li><a href="#contact"> Contact</a> </li>
+					<li><a href="#portfolio">PROJECTS</a></li>
+					<li><a href="#contact">CONTACT</a> </li>
 				</ul>
 			</nav>
 		</header>
 		<a href="#contact"><div class="btn-cta">Hire Me</div></a>
 	</section>
 	<section id="quote">
-		<div class="quote-inner">
-			<figure><%=@quote.quote %>.</figure>
-			
+		<div class="adjectives m-all t-1-3 d-1-3">
+			<img src="assets/ribbon.png">
+			<h3>Motivation.
+				Purpose.
+				Inspiration.
+			</h3>
 		</div>
-
+		<figure class="m-all t-2-3 d-2-3">
+			<%= @quote.quote %>
+		</figure>
 	</section>
-
 	<section id="portfolio">
-		<h2>Current Projects</h2>
-		<div class="project">
-			<img src="http://cdn2.freshdesignweb.com/wp-content/uploads/2015/01/Flipping-Card-3D-jQuery-Javascript-CSS3.jpg">
-		</div>
+		<h2 class="sub-header">CURRENT PROJECTS</h2>
+		<div class="sub-header-border"></div>
+		<div class="flexslider">
+			<ul class="slides">
+				<li>
+					<img src="assets/social-network.jpg" class="t-1-4 d-1-4" />
+					<div class="flex-caption t-1-4 d-1-4">
+						<h4>Social-Network</h4>
+						<p class="caption">An application built from scratch using Ruby on Rails, RSpec, HTML5, SCSS and Javascript. </p>
+						<p><i class="fa fa-github"></i><i class="fa fa-external-link"></i></p>
+					</div>
+				</li>
+
+			</ul>
+		</div>		
 	</section>
 	<section id="contact">
+		<h2 class="sub-header">GET IN TOUCH</h2>
+		<div class="sub-header-border"></div>
+		<%= simple_form_for @contact, :html => {:class => 'form-horizontal'} do |f| %>
+			<%= f.label :name, "Your name" %>
+			<%= f.input :name, label: false %>
+			<%= f.label :email, "Your email" %>
+			<%= f.input :email, label: false %>
+			<%= f.label :message %>
+			<%= f.input :message, :as => :text, label: false%>
+			<div class= "hidden">
+		      <%= f.input :nickname, :hint => 'Leave this field blank!' %>
+		    </div>
+		    <%= f.button :submit, 'Send message', :class=> "btn-send" %>
+	    <% end %>
 	</section>
+	<footer>
+		<a href="https://www.github.com/sandiegodj"><i class="fa fa-github">https</i></a>
+		<a href="http://www.linkedin.com/in/davidjanczyn"><i class="fa fa-linkedin-square "></i></a>
+	</footer>
 </div>

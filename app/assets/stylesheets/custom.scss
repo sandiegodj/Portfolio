@@ -1,7 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900,500);
 @import url(http://fonts.googleapis.com/css?family=Architects+Daughter);
-@import "reset";
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:700,400);@import "reset";
+@import "partials/typography";
+@import "partials/grid";
+@import "partials/variables";
 
 
 $primary-text-color: #555;
@@ -14,8 +17,11 @@ $primary-text-color: #555;
 #wrapper {
 	width: 100%;
 	height: 500px;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto Slab', serif;
 }
+
+
+
 
 
 
@@ -26,6 +32,7 @@ header {
 	width: 100%;
 	min-height: 65px;
 	background: white;
+	z-index: 5;
 	.bold {
 		font-weight: 800;
 	}
@@ -45,12 +52,17 @@ header {
 	}
 	#logo {
 		float: left;
-		margin-left: 5%;
+		margin-left: 10px;
 		margin-top: 10px;
 		color: #333332;
 		.main-logo {
 		font-weight: 300;
 		font-size: 2.0em;
+		color: #333332;
+		letter-spacing: 1px;
+		.bold {
+			font-weight: 600;
+		}
 		}
 		.accent {
 			display: none;
@@ -59,6 +71,7 @@ header {
 		.sub-logo {
 			font-size: .75em;
 			margin-left: 4px;
+			color: #333332;
 
 		}
 	}
@@ -67,13 +80,9 @@ header {
 
 
 
-
-
 	//first
 #top {
 	width: 100%;
-	height: 400px;
-	background: black;
 	h1 {
 		padding-top: 50px;
 		color: #fff;
@@ -99,61 +108,185 @@ header {
 
 
 
+
+
+
 //Quote
 
 section#quote {
 	width: 100%;
-	font-family: 'Architects Daughter', cursive;
-	font-size: 1.5em;
-	background: #333;
-	.quote-inner {
-	width: 90%;
-	margin: 0 auto;
-	color: #fff;
-	padding-top: 15px;
-	padding-bottom: 15px;
-		figure {
+	background: #ffffff;
+	border-top: 2px solid #394851;
+	overflow: hidden;
+	margin-bottom: 50px;
+	.adjectives {
+		img {
+			display: block;
 			margin: 0 auto;
+			transform: rotate(90deg);
 		}
-		address {
-			text-align: right;
+		h3 {
+			color: #394851;
+			text-align: center;
+			background-position: 0 3px;
+			margin: 15px;
+			font-size: 1.25em;
+		}
+	}
+	figure {
+	margin: 0 auto;
+	font-style: italic;
+	color: #3B484F;
+	text-align: center;
+	padding: 0 10px;
+	}
+}
+
+@media screen and (min-width: 768px ) {
+	section#quote {
+		padding-top: 15px;
+		.adjectives {
+			img {
+				display: inline;
+				transform: rotate(0);
+				float: left;
+				margin-top: 4px;
+			}
+			h3 {
+				text-align: left;
+				line-height: 25px;
+				font-size: 1.75em;
+				margin-right: 0;
+				margin-top: 0;
+				margin-left: 15px;
+				float: left;
+				width: 150px;
+			}
+		}
+		figure {
+			text-align: left;
+			line-height: 25px;
 		}
 	}
 }
 
-@media screen and (min-width: 520px ) {
-	section.quote {
-		figure {
-			text-align: center;
-		}
-	}
-}
+
+
 
 
 
 //Portfolio 
+.sub-header {
+	color: #333;
+	padding-top: 25px;
+	font-size: 2.0em;
+	font-weight: bold;
+	font-family: 'Roboto Slab', serif;
+}
+.sub-header-border {
+	height: 5px;
+	width: 90px;
+	margin: 0 auto 25px;
+	border-bottom: 3px solid #394851;
+}
 
 #portfolio {
-	width: 100%;
-	h2 {
-		color: #000;
-		font-size: 2.0em;
-		font-weight: 300;
-		text-align: center;
-		margin: 0 auto;
-		margin-top: 10px;
-		border-bottom: medium double #ddd;
+}
 
+
+
+// Contact Form 
+
+#contact {
+	form {
+		width: 90%;
+		margin: 0 auto;
+		.input {
+			font-size: 1.25em;
+			label {
+				margin-bottom: 5px;
+			}
+			input {
+				width: 100%;
+				margin-top: 5px;
+				margin-bottom: 15px;
+				font-size: 1.25em;
+				border: 1px solid #ccc;
+				border-radius: 3px;
+				transition: all .3s ease;
+				height: 45px;
+				&:focus {
+					outline: none;
+				    border-color: $accent-color;
+				    box-shadow: 0 0 5px $accent-color;
+				}
+			}
+			textarea {
+				width: 100%;
+				font-size: 1.25em;
+				margin-top: 5px;
+				border: 1px solid #ccc;
+
+				&:focus {
+					outline: none;
+				    border-color: $accent-color;
+				    border-radius: 3px;
+				    box-shadow: 0 0 5px $accent-color;
+				}
+			}
+		}
+		.btn-send {
+			appearance: none;
+			border:0 none;
+			cursor: pointer;
+			border-radius: 3px;
+		    outline:none;
+			width: 200px;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			box-shadow: none;
+			background: $accent-color;
+			color: #ffffff;
+			margin-top: 15px;
+			margin-bottom: 25px;
+			margin-left: 10px;
+			font-size: 1.25em;
+				&:hover {
+					border: 2px solid $accent-color;
+					color: $accent-color;
+					background: #ffffff;
+
+				}
+
+		}
+		.hidden {
+			display: none;
+		}
 	}
-	.project {
-		max-width: 90%;
-		margin: 0 auto;
-		img{
-			
-		}
-		img:hover {
-		}
 
+}
+input[type='submit'] {
+  -webkit-appearance: none;
+}
+footer {
+	border-top: 2px solid $accent-color;
+	text-align: center;
+	height: 50px;
+	a {
+		display: inline-block;
+	}
+	i {
+		font-size: 3.0em;
+		color: #333;
+		&:hover {
+			color: darken(#333, 10%);
+
+		}
+		&:first-of-type {
+			margin-right: 10px;
+			margin-left: 10px;
+		}
 	}
 
 }

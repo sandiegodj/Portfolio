@@ -1,1 +1,4 @@
 JS event on hamburger click.  Fade in span of DavidJanczyn"'s"
+
+update production environment for mailer
+Add env variables for heroku

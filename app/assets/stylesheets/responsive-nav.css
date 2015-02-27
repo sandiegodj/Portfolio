@@ -19,6 +19,7 @@
 	zoom: 1;
 }
 .nav-collapse.opened {
+	margin-top: 7px;
 	max-height: 9999px;
 }
 .nav-toggle {
@@ -91,7 +92,8 @@ NAVIGATION STYLES
 	color: #555555;
 	width: 100%;
 	float: left;
-	text-align: center;
+	border-top: 1px solid #ccc;
+
 }
 
 @media screen and (min-width: 40em) {
@@ -101,6 +103,7 @@ NAVIGATION STYLES
 		float: left;
 		margin: 0;
 		background: rgba(0,0,0,0);
+		border-top: none;
 	}
 	.nav-collapse ul, li {
 		background: rgba(0,0,0,0);
@@ -134,7 +137,7 @@ NAV TOGGLE STYLES
 }
 .nav-toggle:before {
 	color: #555555; /* Edit this to change the icon color */
-	font: normal 3.0em/55px "responsivenav"; /* Edit font-size (28px) to change the icon size */
+	font: normal 2.5em/55px "responsivenav"; /* Edit font-size (28px) to change the icon size */
 	text-transform: none;
 	text-align: center;
 	position: absolute;

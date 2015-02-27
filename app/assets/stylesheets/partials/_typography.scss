@@ -1,0 +1,48 @@
+// Stylesheet: Typography 
+
+$sans-serif:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serif:             "Georgia", Cambria, Times New Roman, Times, serif;
+
+
+
+h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
+	text-align: center;
+	text-decoration: none;
+}
+
+h1, .h1 {
+	font-size: 2.5em;
+	line-height: 1.333em;
+}
+
+h2, .h2 {
+	font-size: 1.75em;
+	line-height: 1.4em;
+	margin-bottom: 0.375em;
+}
+h3, .h3 {
+	font-size: 1.125em;
+}
+h4, .h4 {
+	font-size: 1.1em;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+h5, .h5 {
+	font-size: 0.846em;
+	line-height: 2.09em;
+	letter-spacing: 2px;
+}
+
+p {
+	-webkit-hyphens: auto;
+       -moz-hyphens: auto;
+            hyphens: auto;
+
+
+    -webkit-font-feature-settings: "liga", "dlig";
+       -moz-font-feature-settings: "liga=1, dlig=1";
+        -ms-font-feature-settings: "liga", "dlig";
+         -o-font-feature-settings: "liga", "dlig";
+            font-feature-settings: "liga", "dlig";
+}
