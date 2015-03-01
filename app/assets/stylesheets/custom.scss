@@ -150,11 +150,17 @@ section#quote {
 		}
 	}
 	figure {
-	margin: 0 auto;
-	font-style: italic;
-	color: #3B484F;
-	text-align: center;
-	padding: 0 10px;
+		margin: 0 auto;
+		font-style: italic;
+		color: #3B484F;
+		text-align: center;
+		padding: 0 10px;
+		position: relative;
+		i {
+			position: absolute;
+			top: -15px;
+			left: 5px;
+		}
 	}
 }
 
@@ -182,6 +188,10 @@ section#quote {
 		figure {
 			text-align: left;
 			line-height: 25px;
+			i {
+				left: -10px;
+				top: -10px;
+			}
 		}
 	}
 }
@@ -272,7 +282,9 @@ section#quote {
 			color: $accent-color;
 			margin: 15px auto 25px auto;
 			font-size: 1.25em;
-			transition: all .5s ease-out;
+			-webkit-transition: all .5s ease-out;
+			   -moz-transition: all .5s ease-out;
+			        transition: all .5s ease-out;
 				&:hover {
 					border: 2px solid $accent-color;
 					color: #fff;
