@@ -303,12 +303,18 @@ input[type='submit'] {
   -webkit-appearance: none;
 }
 footer {
-	border-top: 2px solid $accent-color;
 	text-align: center;
 	height: 50px;
 	clear: both;
+	margin-bottom: 10px;
 	a {
 		display: inline-block;
+	}
+	.fa-github {
+		margin-right: 50px;
+	}
+	.fa-linkedin-square {
+		margin-left: 50px;
 	}
 	i {
 		font-size: 3.0em;
@@ -316,10 +322,6 @@ footer {
 		&:hover {
 			color: darken(#333, 10%);
 
-		}
-		&:first-of-type {
-			margin-right: 10px;
-			margin-left: 10px;
 		}
 	}
 
