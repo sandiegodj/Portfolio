@@ -94,9 +94,7 @@ NAVIGATION STYLES
 	float: left;
 	border-top: 1px solid #ccc;
 }
-.nav-collapse:nth-child(2) {
-	border-bottom: 1px solid #ccc;
-}
+
 
 @media screen and (min-width: 40em) {
 	.nav-collapse a {
@@ -110,6 +108,9 @@ NAVIGATION STYLES
 	.nav-collapse ul, li {
 		background: rgba(0,0,0,0);
 	}
+	.nav-collapse:nth-child(2) {
+	border-bottom: none;
+}
 
 }
 
