@@ -13,7 +13,9 @@ $primary-text-color: #333;
 	box-sizing: border-box;
 
 }
-
+.hidden {
+	display: none;
+}
 #wrapper {
 	width: 100%;
 	height: 500px;

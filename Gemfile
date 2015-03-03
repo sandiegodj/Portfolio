@@ -15,8 +15,13 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+# use figaro for env variables
 gem 'figaro'
+
 gem 'newrelic_rpm'
+
+# fancybox for slideshow
+gem 'fancybox2-rails'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
